@@ -1,0 +1,75 @@
+@import "../../styles/generic.scss";
+
+.experience-item {
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0rem;
+    margin-top: 0.5rem;
+
+    @include from($tablet) {
+      align-items: center;
+    }
+
+    &-logo {
+      height: 1.4em;
+    }
+
+    &-role {
+      margin-right: 0.5rem;
+    }
+
+    @include from($tablet) {
+      flex-flow: row wrap;
+      margin-top: 0;
+    }
+  }
+
+  &__organisation {
+    align-items: center;
+    display: flex;
+    white-space: pre-wrap;
+    margin-bottom: 1em;
+
+    a.no-underline {
+      height: 1em;
+    }
+
+    img {
+      margin-top: 1rem;
+      height: 3em;
+    }
+  }
+
+  &__point {
+    display: flex;
+    line-height: 1.5rem !important;
+    margin: 0.5rem 0;
+
+    &-arrow {
+      margin-right: 0.4rem;
+    }
+
+    @include from($tablet) {
+      line-height: 1.75rem !important;
+      margin: 0.7rem 0;
+    }
+  }
+
+  &__stack {
+    margin-top: 1.5rem;
+
+    &-title {
+      font-size: 1rem !important;
+      margin-bottom: 1rem;
+
+      @include from($tablet) {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+}

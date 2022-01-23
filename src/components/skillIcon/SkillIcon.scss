@@ -1,0 +1,44 @@
+.skill-icon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  margin-right: 1rem;
+  position: relative;
+  width: 40px;
+  z-index: 0;
+
+  .svgr {
+    max-height: 40px;
+    max-width: 40px;
+  }
+
+  &.is-small {
+    height: 28px;
+    margin-bottom: 1.4rem;
+    margin-right: 0.6rem;
+    width: 28px;
+
+    .svgr {
+      max-height: 28px;
+      max-width: 28px;
+    }
+  }
+
+  &__name {
+    bottom: -1.3rem;
+    font-size: 12px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s, color 0.5s;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    .skill-icon__name {
+      opacity: 1;
+    }
+  }
+}

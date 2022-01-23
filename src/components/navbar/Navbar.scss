@@ -1,0 +1,140 @@
+@import "../../styles/generic.scss";
+
+nav.navbar {
+  background-color: transparent;
+  overflow: visible;
+  padding-top: 1.5rem;
+
+  .navbar-menu {
+    background-color: transparent;
+    box-shadow: none !important;
+  }
+
+  .navbar-end,
+  .navbar-brand {
+    align-items: center;
+    padding: 0 0 0 5vw;
+
+    @include from($tablet) {
+      padding: 0 0 0 8vw;
+    }
+
+    @include from($desktop) {
+      padding: 0 0 0 12vw;
+    }
+  }
+
+  .navbar-item {
+    color: gray;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+    &:not(:first-of-type) {
+      margin-left: 1.8rem;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: initial;
+      color: black;
+    }
+
+    &.is-pointer:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 1023px) {
+      border-bottom: 0 !important;
+      margin-left: 0 !important;
+      padding: 0.5rem 0 !important;
+    }
+  }
+
+  .navbar-brand > .navbar-item {
+    margin-left: 0;
+  }
+
+  .navbar-switch__container {
+    margin-left: auto;
+    padding: 12px;
+
+    &.is-non-root {
+      margin-right: 5vw;
+
+      @include from($tablet) {
+        margin-right: 8vw;
+      }
+    }
+
+    @include from($desktop) {
+      display: none;
+    }
+  }
+
+  .navbar-switch-mobile {
+    cursor: default !important;
+    height: 24px;
+    width: 24px;
+  }
+
+  .navbar-switch-desktop {
+    display: none;
+    height: 30px;
+    margin: -1px 5vw 0 1.8rem;
+    width: 30px;
+
+    &.is-non-root {
+      margin-left: auto;
+    }
+
+    @include from($tablet) {
+      margin-right: 8vw;
+    }
+
+    @include from($desktop) {
+      display: block;
+      margin-right: 12vw;
+    }
+  }
+
+  .navbar-brand {
+    padding-right: 0;
+
+    @include from($desktop) {
+      transform: translateY(-0.3rem);
+    }
+  }
+
+  .navbar-end {
+    @include from($desktop) {
+      padding-left: 0;
+      padding-right: 12vw;
+    }
+  }
+
+  .navbar-burger {
+    background-color: transparent;
+    border: 0;
+    height: 3rem;
+    margin-right: 5vw;
+    outline: none;
+    width: 3rem;
+
+    span {
+      color: black;
+
+      // Override the default transitions and adds color
+      transition: opacity 86ms ease-out, transform 86ms ease-out, color 0.5s;
+    }
+
+    @include from($tablet) {
+      margin-right: 8vw;
+    }
+  }
+
+  @include from($desktop) {
+    padding-top: 3rem;
+  }
+}

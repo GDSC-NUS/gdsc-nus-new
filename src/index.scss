@@ -1,0 +1,31 @@
+@import "styles/generic.scss";
+
+.svgr {
+  max-height: 40px;
+  max-width: 40px;
+
+  path,
+  circle,
+  ellipse {
+    transition: fill 0.5s;
+  }
+}
+
+.icons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  z-index: 0;
+}
+
+.contact-links {
+  a {
+    margin-right: 2rem;
+  }
+
+  a:last-child {
+    margin-right: 0;
+  }
+}

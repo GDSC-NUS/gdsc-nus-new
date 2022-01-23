@@ -1,0 +1,29 @@
+a {
+  color: #306fdb;
+  margin-bottom: 0;
+  padding-bottom: 1px;
+  padding-top: 0;
+  text-decoration: none;
+  transition: color 0.5s;
+
+  &:hover {
+    color: black;
+  }
+
+  &.is-reversed {
+    padding-bottom: 4px;
+
+    @include from($tablet) {
+      padding-bottom: 8px;
+    }
+  }
+
+  &.no-underline {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  @include from($tablet) {
+    padding-bottom: 4px;
+  }
+}

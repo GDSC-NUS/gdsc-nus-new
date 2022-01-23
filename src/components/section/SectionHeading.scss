@@ -1,0 +1,33 @@
+@import "../../styles/generic.scss";
+
+.section-heading {
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+
+  &.inc-margin-top {
+    margin-top: 3rem;
+  }
+
+  &__subtitle {
+    margin-top: 0.3rem;
+  }
+
+  .is-toggle {
+    cursor: pointer;
+  }
+
+  &__emoji-container {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1.6rem;
+
+    figure,
+    button {
+      margin-right: 1rem;
+      outline: none;
+      padding: 0;
+      position: relative;
+    }
+  }
+}

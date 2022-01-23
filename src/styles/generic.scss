@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import "../../node_modules/bulma/bulma.sass";
+
+// Sizes
+$mobile: 576px !default;
+
+// Colors
+$secondary-color: #757575;
+$dark-mode-primary-color: #2c2f44;
+$dark-mode-secondary-color: #a4a6b9;
+$success-color: #f8ce64;
+$calendar-cell-background-color: #f3f3f3;
+$dark-mode-calendar-cell-background-color: #55556d;
+$calendar-cell-background-color-hover: #dbdbdb;
+$dark-mode-calendar-cell-background-color-hover: #74748f;
+
+@import "./anchor.scss";
+@import "./base.scss";
+@import "./typography.scss";

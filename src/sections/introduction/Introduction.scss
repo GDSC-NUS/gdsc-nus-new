@@ -1,0 +1,20 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__emoji {
+    height: 256px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title,
+  &__body {
+    text-align: center;
+  }
+
+  &__contacts {
+    padding-top: 4rem;
+  }
+}

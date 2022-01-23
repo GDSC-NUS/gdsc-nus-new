@@ -1,0 +1,26 @@
+@import "../../styles/generic.scss";
+
+.experience-item {
+  &__modules {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-year {
+      margin-right: 0.5rem;
+    }
+
+    &-sep {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__point.is-teaching {
+    line-height: 2.6rem !important;
+    margin: 0;
+
+    &:first-of-type {
+      margin-top: 0.5rem;
+    }
+  }
+}

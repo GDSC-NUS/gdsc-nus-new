@@ -1,0 +1,121 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+label,
+i {
+  color: black;
+  transition: color 0.5s, opacity 0.5s;
+}
+
+.is-bold {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.is-grey {
+  color: $secondary-color !important;
+}
+
+.is-72 {
+  font-size: 2.6rem;
+  line-height: 3rem;
+
+  @include from($tablet) {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+.is-64 {
+  font-size: 2rem;
+
+  @include from($tablet) {
+    font-size: 2.5rem;
+  }
+}
+
+.is-36 {
+  font-size: 1.4rem;
+
+  @include from($tablet) {
+    font-size: 1.6rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1.8rem;
+  }
+}
+
+.is-32 {
+  font-size: 1.25rem;
+
+  @include from($desktop) {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+}
+
+.is-28 {
+  font-size: 1.1rem;
+
+  @include from($tablet) {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
+}
+
+.is-24 {
+  font-size: 1rem;
+
+  @include from($tablet) {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
+}
+
+.is-20 {
+  font-size: 0.9rem;
+
+  @include from($tablet) {
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+}
+
+p.is-32 {
+  margin-bottom: 1.4rem;
+}
+
+p.is-28 {
+  margin-bottom: 1.1rem;
+}
+
+p.is-24 {
+  margin-bottom: 0.8rem;
+}
