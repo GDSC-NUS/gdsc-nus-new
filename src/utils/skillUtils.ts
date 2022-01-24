@@ -15,6 +15,8 @@ export const getSvgrFromSkill = (
       return skills.Express;
     case Skills.FIGMA:
       return skills.Figma;
+    case Skills.FINALCUTPRO:
+      return skills.FinalCutPro;
     case Skills.FIREBASE:
       return skills.Firebase;
     case Skills.FLUTTER:

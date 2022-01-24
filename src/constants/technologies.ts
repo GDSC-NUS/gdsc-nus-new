@@ -10,6 +10,7 @@ export enum Skills {
   ELECTRON = "Electron",
   EXPRESS = "Express",
   FIGMA = "Figma",
+  FINALCUTPRO = "FinalCutPro",
   FIREBASE = "Firebase",
   FLOW = "Flow",
   FLUTTER = "Flutter",

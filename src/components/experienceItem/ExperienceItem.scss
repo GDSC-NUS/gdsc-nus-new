@@ -26,17 +26,13 @@
   }
 
   &__organisation {
-    align-items: center;
-    display: flex;
-    white-space: pre-wrap;
-    margin-bottom: 1em;
-
     a.no-underline {
       height: 1em;
     }
 
     img {
       margin-top: 1rem;
+      margin-bottom: 0.5rem;
       height: 3em;
     }
   }

@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import ReactGA from "react-ga";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "components/navbar/Navbar";
+import Footer from "components/footer/Footer";
 
 import { useTheme } from "components/contexts/ThemeContext";
 import { navbarLinks } from "constants/navbarLinks";
@@ -38,7 +39,7 @@ const Main = (): ReactElement<void, "main"> => {
           <Route element={redirectToHome} />
           <Route element={updateTracking} path="/" />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </main>
   );

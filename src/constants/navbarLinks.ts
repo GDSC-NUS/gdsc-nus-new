@@ -12,18 +12,18 @@ export const navbarLinks: {
       offset: 0,
     },
     {
+      label: "Projects",
+      to: "projects",
+      offset: 58,
+    },
+    {
       label: "Experience",
       to: "experience",
       offset: 58,
     },
     {
-      label: "Projects",
-      to: "favourite-projects",
-      offset: 58,
-    },
-    {
       label: "Contact",
-      to: "contact-me",
+      to: "my-footer",
       offset: 58,
     },
   ],

@@ -3,6 +3,7 @@ export { default as Chevron } from "./Chevron";
 export { default as Docker } from "./Docker";
 export { default as Express } from "./Express";
 export { default as Figma } from "./Figma";
+export { default as FinalCutPro } from "./FinalCutPro";
 export { default as Firebase } from "./Firebase";
 export { default as Flutter } from "./Flutter";
 export { default as Git } from "./Git";
