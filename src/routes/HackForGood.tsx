@@ -3,6 +3,7 @@ import { Fragment, ReactElement } from "react";
 import HackathonHeader from "sections/hackathonHeader/HackathonHeader";
 import HackathonAbout from "sections/hackathonAbout/HackathonAbout";
 import HackathonTimeline from "sections/hackathonTimeline/HackathonTimeline";
+import HackathonSponsors from "sections/hackathonSponsors/HackathonSponsors";
 
 const HackForGood = (): ReactElement<void, typeof Fragment> => {
   return (
@@ -10,6 +11,7 @@ const HackForGood = (): ReactElement<void, typeof Fragment> => {
       <HackathonHeader />
       <HackathonAbout />
       <HackathonTimeline />
+      <HackathonSponsors />
     </>
   );
 };

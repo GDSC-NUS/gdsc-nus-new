@@ -1,5 +1,3 @@
-import { About } from "./about";
-
 export interface ScheduleItem {
   startTime: string;
   endTime: string;
@@ -13,6 +11,24 @@ export interface TimelineItem {
   location?: string;
 }
 
+export interface Theme {
+  title: string;
+  image: string;
+}
+
+export interface ProblemStatement {
+  npo: string;
+  aboutNpo: string;
+  statement: string;
+}
+
+export interface Sponsor {
+  [tier: string]: {
+    name: string;
+    image: string;
+  }[];
+}
+
 export const HackForGood: {
   year: string;
   date: string;
@@ -23,10 +39,12 @@ export const HackForGood: {
   linkMessage: string;
   primaryDetails: string;
   secondaryDetails: string;
-  aboutItems: About[];
+  themes: Theme[];
+  problemStatements: ProblemStatement[];
   timeline: TimelineItem[];
   openingSchedule: ScheduleItem[];
   finaleSchedule: ScheduleItem[];
+  sponsors: Sponsor;
 } = {
   year: "2022",
   date: "7 - 19 March 2022",
@@ -39,29 +57,28 @@ export const HackForGood: {
     "Hack For Good is a student-run hackathon which seeks to inspire students to learn and use technology for social causes, developing solutions to real problem statements from NPOs in Singapore.",
   secondaryDetails:
     "Participating teams are expected to create technological prototypes as part of their solution to tackle their chosen statement. We want to be practical and do real good with this initiative. We are hoping to foster collaborations between the club, corporate sponsors, NPOs and the students in this event!",
-  aboutItems: [
+  problemStatements: [
     {
-      title: "Build tech solutions for the community",
-      descriptions: [
-        "We work with local Non-Profit Organizations to build tech solutions that improve their processes and impact the community.",
-      ],
-      skills: [],
-      primaryMessage: "Read more",
-      primaryLink: "/projects",
+      npo: "Daughters of Tomorrow",
+      aboutNpo: "We are a non-profit organization in Singapore.",
+      statement: "Build a tech solution",
+    },
+  ],
+  themes: [
+    {
+      title: "Community",
       image:
-        "https://res.cloudinary.com/dsk6p2wwo/image/upload/v1642991043/Screenshot_2022-01-24_at_10.23.55_AM_k5j6je.png",
+        "https://res.cloudinary.com/dgzeeixzi/image/upload/v1645610632/community_kguhzz.png",
     },
     {
-      title: "Conduct tech workshops",
-      descriptions: [
-        "Our tech workshops aim to build generative skills in tech among students regardless of background.",
-        "Past topics range from Web Development to Machine Learning",
-      ],
-      skills: [],
-      primaryMessage: "Learn more",
-      primaryLink: "/wokrshops",
+      title: "Environment",
       image:
-        "https://res.cloudinary.com/dsk6p2wwo/image/upload/v1642996150/smartmockups_kys584wc_pn69b6.jpg",
+        "https://res.cloudinary.com/dgzeeixzi/image/upload/v1645610637/environment_lnhtol.png",
+    },
+    {
+      title: "Equality",
+      image:
+        "https://res.cloudinary.com/dgzeeixzi/image/upload/v1645610614/equality_h6c8z9.png",
     },
   ],
   timeline: [
@@ -117,4 +134,39 @@ export const HackForGood: {
       event: "Announcement of Top 3 Teams",
     },
   ],
+  sponsors: {
+    Gold: [
+      {
+        name: "GIC",
+        image:
+          "https://res.cloudinary.com/dgzeeixzi/image/upload/v1645612681/gic_xxl8rx.jpg",
+      },
+      {
+        name: "Thoughtworks",
+        image:
+          "https://res.cloudinary.com/dgzeeixzi/image/upload/v1645611644/thoughtworks_dc3x2j.png",
+      },
+    ],
+    Silver: [
+      {
+        name: "Quest Ventures",
+        image:
+          "https://res.cloudinary.com/dgzeeixzi/image/upload/v1645612274/questventures_hukdlk.png",
+      },
+    ],
+    Bronze: [
+      {
+        name: "Sustainable Living Labs",
+        image:
+          "https://res.cloudinary.com/dgzeeixzi/image/upload/v1645612825/sl2_ywdmqi.png",
+      },
+    ],
+    Supported: [
+      {
+        name: "Google",
+        image:
+          "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      },
+    ],
+  },
 };

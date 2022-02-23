@@ -1,0 +1,38 @@
+@import "../../styles/generic.scss";
+
+.hackathon-sponsors {
+  text-align: center;
+
+  &__title {
+    padding-top: 3rem;
+    text-align: center;
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .gold {
+      width: 20rem;
+      margin: 3rem;
+    }
+    .silver {
+      margin: 3rem;
+      width: 15rem;
+    }
+    .bronze {
+      width: 12rem;
+      margin: 3rem;
+    }
+  }
+
+  &__body {
+    text-align: center;
+  }
+
+  &__contacts {
+    padding-top: 4rem;
+  }
+}

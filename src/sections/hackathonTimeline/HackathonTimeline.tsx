@@ -22,7 +22,7 @@ const HackathonTimeline = (): ReactElement<void, typeof SectionWrapper> => {
         {timeline.map((event) => (
           <VerticalTimelineElement
             contentStyle={{
-              background: "rgb(0, 74, 173)",
+              background: "#004aad",
               color: "#fff",
               WebkitBoxShadow: "none",
               borderRadius: "10px",

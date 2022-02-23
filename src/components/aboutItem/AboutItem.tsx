@@ -40,7 +40,6 @@ const AboutItem = (
           <OutboundLink
             className="is-reversed"
             eventLabel={`About (Primary) - ${title}`}
-            target="_blank"
             to={primaryLink}
           >
             {primaryMessage}
@@ -51,7 +50,6 @@ const AboutItem = (
             <OutboundLink
               className="is-reversed"
               eventLabel={`About (Secondary) - ${title}`}
-              target="_blank"
               to={secondaryLink}
             >
               {secondaryMessage}
