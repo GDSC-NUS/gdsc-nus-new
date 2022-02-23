@@ -1,27 +1,22 @@
+import UndraggableImage from "components/undraggableImage/UndraggableImage";
 import { ReactElement, useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import GDSC from "assets/gdsc.svg";
 
 import "./Navbar.scss";
 
 export interface NavbarLink {
   label: string;
   to: string;
-  offset: number;
 }
 
 interface NavbarProps {
   links: NavbarLink[];
-  isDark: boolean;
-  setIsDark: () => void;
   isBrandClickable?: boolean;
   brandLink?: string;
 }
 
-const Navbar = ({
-  links,
-  isDark,
-  setIsDark,
-}: NavbarProps): ReactElement<NavbarProps, "nav"> => {
+const Navbar = ({ links }: NavbarProps): ReactElement<NavbarProps, "nav"> => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   return (
@@ -31,7 +26,9 @@ const Navbar = ({
       role="navigation"
     >
       <div className="navbar-brand">
-        <div className={`is-bold is-32`}>Joel Wong</div>
+        <Link className="navbar-image no-underline" to={"/"}>
+          <UndraggableImage alt="gdsc-nus" src={GDSC} />
+        </Link>
         {links.length > 0 && (
           <button
             aria-expanded="false"
@@ -54,10 +51,8 @@ const Navbar = ({
           <div className="navbar-end">
             {links.map((l: NavbarLink) => (
               <Link
-                className="navbar-item is-reversed is-20"
+                className="navbar-item is-reversed is-28 is-bold"
                 key={`navbar-${l.label}`}
-                offset={l.offset}
-                smooth={true}
                 to={l.to}
               >
                 {l.label}

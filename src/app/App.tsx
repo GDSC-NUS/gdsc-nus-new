@@ -1,19 +1,18 @@
 import { lazy, ReactElement, Suspense, useEffect } from "react";
-// import { Loading } from "@hanming.dev/components";
 import { useTheme } from "components/contexts/ThemeContext";
 
-import { project } from "data/projects";
+import { about } from "data/about";
 import {
   processSmallerCloudinaryUrl,
   usePreloadImages,
 } from "utils/imageUtils";
 import { BrowserRouter } from "react-router-dom";
 
-const imagesToPreload = project.projects
-  .filter((project) => !project.isFavourite)
-  .filter((project) => project.isShown !== false)
-  .map((project) => project.image ?? "")
-  .filter((image) => image.length > 0)
+const imagesToPreload = about.aboutItems
+  .filter((item) => !item.isFavourite)
+  .filter((item) => item.isShown !== false)
+  .map((item) => item.image ?? "")
+  .filter((item) => item.length > 0)
   .map((image) => processSmallerCloudinaryUrl(image));
 
 const Main = lazy(() => import("./Main"));

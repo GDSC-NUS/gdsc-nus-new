@@ -1,0 +1,70 @@
+@import "../../styles/generic.scss";
+
+.hackathon-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(white, transparent, transparent, white),
+    url(https://dsc.comp.nus.edu.sg/static/media/hfg2022_background.dc78d1dd.png) !important;
+
+  &__details {
+    text-align: center;
+    flex: 4;
+    padding-right: 0;
+
+    &-title {
+      margin-bottom: 0.5rem;
+
+      @include from($desktop) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @include from($desktop) {
+      text-align: start;
+      padding-right: 2rem;
+    }
+  }
+
+  &__image {
+    flex: 5;
+    margin-bottom: 1rem;
+    overflow: hidden;
+
+    img {
+      height: 300px;
+      object-fit: cover;
+
+      @include from($desktop) {
+        height: 500px;
+      }
+    }
+
+    @include from($desktop) {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__sorry {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      margin-inline-end: 1rem;
+    }
+  }
+
+  &__link.is-28 {
+    margin-bottom: 1.7rem;
+
+    &.has-secondary {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  @include from($desktop) {
+    flex-direction: row;
+  }
+}

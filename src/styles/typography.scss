@@ -13,9 +13,12 @@ i {
   transition: color 0.5s, opacity 0.5s;
 }
 
+.is-semibold {
+  font-weight: 500;
+}
+
 .is-bold {
   font-weight: 700;
-  letter-spacing: normal;
 }
 
 .is-grey {
@@ -28,6 +31,16 @@ i {
 
   @include from($tablet) {
     font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+.is-68 {
+  font-size: 2.3rem;
+  line-height: 3rem;
+
+  @include from($tablet) {
+    font-size: 3rem;
     line-height: 4rem;
   }
 }
@@ -57,12 +70,10 @@ i {
 
   @include from($desktop) {
     font-size: 1.4rem;
-    line-height: 2.6rem;
   }
 
   @include from($desktop) {
     font-size: 1.6rem;
-    line-height: 2.8rem;
   }
 }
 

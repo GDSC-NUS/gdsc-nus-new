@@ -1,19 +1,15 @@
 import { Fragment, ReactElement } from "react";
 
-// import AboutMe from "sections/aboutMe";
-// import Contact from "sections/contact";
-import Experiences from "sections/experiences/Experiences";
-// import FavouriteProjects from "sections/favouriteProjects";
+import About from "sections/about/About";
 import Introduction from "sections/introduction/Introduction";
-import Projects from "sections/projects/Projects";
-// import Skills from "sections/skills";
+import RecentEvents from "sections/recentEvents/RecentEvents";
 
 const Home = (): ReactElement<void, typeof Fragment> => {
   return (
     <>
       <Introduction />
-      <Projects />
-      <Experiences />
+      <About />
+      <RecentEvents />
     </>
   );
 };

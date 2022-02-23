@@ -1,7 +1,5 @@
-import BantuLogo from "../assets/bantu.png";
-import GDSC from "../assets/gdsc.png";
+import GDSC from "../assets/gdsc.svg";
 
 export const organisationToLogo: { [key: string]: string } = {
-  bantu: BantuLogo,
   gdsc: GDSC,
 };

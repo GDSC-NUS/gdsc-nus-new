@@ -1,13 +1,13 @@
 import { ReactElement } from "react";
 import ReactGA from "react-ga";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+
 import Navbar from "components/navbar/Navbar";
 import Footer from "components/footer/Footer";
-
-import { useTheme } from "components/contexts/ThemeContext";
 import { navbarLinks } from "constants/navbarLinks";
-import { ROOT } from "constants/routes";
+import { HACKFORGOOD, ROOT } from "constants/routes";
 import Home from "routes/Home";
+import HackForGood from "routes/HackForGood";
 
 import "./Main.scss";
 
@@ -22,20 +22,18 @@ const updateTracking = (): null => {
 
 const Main = (): ReactElement<void, "main"> => {
   const { pathname } = useLocation();
-  const { isDark, setIsDark } = useTheme();
 
   return (
     <main id="main">
       <Navbar
         brandLink={ROOT}
         isBrandClickable={pathname !== ROOT}
-        isDark={isDark}
-        links={navbarLinks[pathname] ?? []}
-        setIsDark={setIsDark}
+        links={navbarLinks}
       />
       <div className="main-page">
         <Routes>
           <Route element={<Home />} path={ROOT} />
+          <Route element={<HackForGood />} path={HACKFORGOOD} />
           <Route element={redirectToHome} />
           <Route element={updateTracking} path="/" />
         </Routes>

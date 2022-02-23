@@ -6,16 +6,16 @@ import "./Footer.scss";
 const Footer = (): ReactElement<void, "div"> => {
   return (
     <div className="my-footer">
-      <div className="is-32 is-bold my-footer__title">Contact</div>
-      <div className="contact-links is-28 my-footer__contacts">
+      <div className="is-36 is-bold my-footer__title">Contact Us</div>
+      <div className="contact-links is-24 is-bold">
         <div>
           <OutboundLink
             className="is-reversed"
-            eventLabel="Footer - GitHub"
+            eventLabel="Footer - Instagram"
             target="_blank"
-            to="https://github.com/joelwongjy"
+            to="https://instagram.com/dscnus"
           >
-            GitHub
+            Instagram
           </OutboundLink>
         </div>
         <div>
@@ -23,18 +23,9 @@ const Footer = (): ReactElement<void, "div"> => {
             className="is-reversed"
             eventLabel="Footer - LinkedIn"
             target="_blank"
-            to="https://www.linkedin.com/in/joelwongjy/"
+            to="https://www.linkedin.com/company/dscnus/"
           >
             LinkedIn
-          </OutboundLink>
-        </div>
-        <div>
-          <OutboundLink
-            className="is-reversed"
-            eventLabel="Footer - Email"
-            to="mailto:joelwongjy@gmail.com"
-          >
-            Email
           </OutboundLink>
         </div>
         <div>
@@ -47,6 +38,18 @@ const Footer = (): ReactElement<void, "div"> => {
             YouTube
           </OutboundLink>
         </div>
+        <div>
+          <OutboundLink
+            className="is-reversed"
+            eventLabel="Footer - Email"
+            to="mailto:lead.dscnus@gmail.com"
+          >
+            Email
+          </OutboundLink>
+        </div>
+      </div>
+      <div className="is-16 is-bold my-footer__copyright">
+        © DSC NUS 2019–2022
       </div>
     </div>
   );

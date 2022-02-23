@@ -1,0 +1,54 @@
+@import "../../styles/generic.scss";
+
+.hackathon-timeline {
+  .vertical-timeline-element {
+    margin: 2em 0;
+  }
+
+  &__event {
+    div {
+      color: white;
+    }
+
+    .vertical-timeline-element-content {
+      padding: 16px;
+    }
+
+    .vertical-timeline-element-date {
+      font-size: 16px !important;
+      padding-top: 8px;
+      padding-bottom: 4px;
+      color: white;
+      opacity: 1;
+
+      @include from($desktop) {
+        font-size: 20px !important;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &__schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include from($tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__table {
+    margin-right: 30px;
+  }
+
+  &__title,
+  &__body {
+    text-align: center;
+  }
+
+  &__contacts {
+    padding-top: 4rem;
+  }
+}

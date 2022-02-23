@@ -1,0 +1,65 @@
+@import "../../styles/generic.scss";
+
+.about-item {
+  display: flex;
+  flex-direction: column-reverse;
+
+  &__details {
+    flex: 6;
+    padding-right: 0;
+
+    &-title {
+      margin-bottom: 1rem;
+
+      @include from($desktop) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    @include from($desktop) {
+      padding-right: 2rem;
+    }
+  }
+
+  &__image {
+    flex: 5;
+    margin-bottom: 1rem;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @include from($desktop) {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__sorry {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      margin-inline-end: 1rem;
+    }
+  }
+
+  &__link.is-28 {
+    margin-bottom: 1.7rem;
+
+    &.has-secondary {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+
+  @include from($desktop) {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}

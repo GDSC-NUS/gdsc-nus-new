@@ -6,18 +6,8 @@
   margin-bottom: 3rem;
   margin-top: 8rem;
 
-  &__thanks {
-    align-items: center;
-    display: flex;
-    margin-bottom: 3rem;
-
-    figure {
-      margin-left: 1rem;
-    }
-
-    @include from($desktop) {
-      margin-bottom: 0;
-    }
+  &__copyright {
+    padding-top: 8px;
   }
 
   .contact-links {
@@ -41,7 +31,6 @@
 
   @include from($desktop) {
     align-items: center;
-    flex-direction: row;
     justify-content: space-between;
   }
 }

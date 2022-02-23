@@ -35,11 +35,6 @@ const SectionHeading = (
         increasedMarginTop ? " inc-margin-top" : ""
       }`}
     >
-      {/* <div className="section-heading__emoji-container">
-        <figure className="image is-48x48">
-          <img alt={emojiAlt} src={emoji} />
-        </figure>
-      </div> */}
       <h2 className="section-heading__title is-64 is-bold">{title}</h2>
       {subtitle && (
         <div className="section-heading__subtitle is-32 is-grey">

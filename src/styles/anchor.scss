@@ -1,20 +1,27 @@
 a {
-  color: #306fdb;
+  color: $primary-color;
   margin-bottom: 0;
-  padding-bottom: 1px;
+  padding-bottom: 4px;
   padding-top: 0;
   text-decoration: none;
-  transition: color 0.5s;
+  transition: border-bottom 200ms ease, padding-bottom 200ms ease, color 0.5s;
 
   &:hover {
+    border-bottom: 2px solid $primary-color;
     color: black;
+    padding-bottom: 1px;
+
+    @include from($tablet) {
+      padding-bottom: 4px;
+    }
   }
 
   &.is-reversed {
+    border-bottom: 2px solid transparent;
     padding-bottom: 4px;
 
-    @include from($tablet) {
-      padding-bottom: 8px;
+    &:hover {
+      border-bottom: 2px solid $primary-color;
     }
   }
 
@@ -24,6 +31,6 @@ a {
   }
 
   @include from($tablet) {
-    padding-bottom: 4px;
+    padding-bottom: 8px;
   }
 }

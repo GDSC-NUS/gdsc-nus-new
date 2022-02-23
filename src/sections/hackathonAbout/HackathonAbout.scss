@@ -1,0 +1,41 @@
+@import "../../styles/generic.scss";
+
+.hackathon-about {
+  &__description {
+    margin-bottom: 2rem;
+  }
+
+  &__themes {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    justify-items: center;
+    text-align: center;
+
+    @include from($tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include from($desktop) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+    }
+
+    @include from($widescreen) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    img {
+      height: 170px;
+    }
+  }
+
+  &__title,
+  &__body {
+    text-align: center;
+  }
+
+  &__contacts {
+    padding-top: 4rem;
+  }
+}

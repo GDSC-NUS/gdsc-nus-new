@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 html {
   background-color: white;
@@ -9,13 +9,25 @@ body {
   font-family: DM Sans, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 600;
   letter-spacing: -0.75px;
+  font-weight: 500;
   margin: 0;
   transition: color 0.5s, background-color 0.5s;
 
   > div {
     background-color: transparent;
+  }
+  .blue {
+    color: $google-blue;
+  }
+  .green {
+    color: $google-green;
+  }
+  .red {
+    color: $google-red;
+  }
+  .yellow {
+    color: $google-yellow;
   }
 }
 
